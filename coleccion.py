@@ -20,7 +20,7 @@ class Coleccion (IColeccion):
 
     def insertarElemento(self, elemento, posicion):
         if posicion < 0 and posicion > len (self.__listaE):
-            raise Exception ('Eror, posicion incorrecta')
+            raise Exception ('Error, posicion incorrecta')
         self.__listaE.insert (posicion, elemento)
 
     def agregarElemento(self, elemento):
@@ -28,5 +28,5 @@ class Coleccion (IColeccion):
 
     def mostrarElemento(self, posicion):
         if posicion < 0 and posicion > len (self.__listaE):
-            raise Exception ('Eror, posicion incorrecta')
+            raise Exception ('Error, posicion incorrecta')
         print (self.__listaE[posicion])
