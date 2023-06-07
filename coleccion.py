@@ -1,16 +1,14 @@
-from  abc import ABC, abstractmethod
+from zope.interface import Interface, implementer
+from zope.interface.verify import verifyObject
 
-class IColeccion (ABC):
-    @abstractmethod
-    def insertarElemento (self, elemento, posicion):
+class IColeccion(Interface):
+    def insertarElemento(objeto, posicion):
         pass
-
-    @abstractmethod
-    def agregarElemento (self, elemento):
+    
+    def agregarElemento(objeto):
         pass
-
-    @abstractmethod
-    def mostrarElemento (self, posicion):
+    
+    def mostrarElemento(posicion):
         pass
 
 class Coleccion (IColeccion):
